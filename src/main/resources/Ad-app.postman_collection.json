@@ -1,0 +1,124 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Ad-app",
+		"_postman_id": "117e4803-7823-0e75-78f4-f8c08a306a24",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createAd",
+			"request": {
+				"url": "http://localhost:8080/ad-app/ad",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"businessId\" : \"2\",\n\t\"content\" : \"third add\"\n}"
+				},
+				"description": "restful endpoint to create an ad"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteAd",
+			"request": {
+				"url": "http://localhost:8080/ad-app/ad/2",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "bhaskar",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "password",
+							"value": "123$",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": "restful endpoint to delete an ad"
+			},
+			"response": []
+		},
+		{
+			"name": "createImpression",
+			"request": {
+				"url": "http://localhost:8080/ad-app/impression",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"adId\" : 4,\n\t\"browserInfo\" : \"fireFox\",\n\t\"trackingInfo\" : \"user1\"\n}"
+				},
+				"description": "restful endpoint to create an impression\n"
+			},
+			"response": []
+		},
+		{
+			"name": "createClick",
+			"request": {
+				"url": "http://localhost:8080/ad-app/click",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"impressionId\" : \"3\"\n}"
+				},
+				"description": "restful endpoint to create a click\n"
+			},
+			"response": []
+		},
+		{
+			"name": "getAd",
+			"request": {
+				"url": "http://localhost:8080/ad-app/ad",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"businessId\" : \"2\",\n\t\"content\" : \"third add\"\n}"
+				},
+				"description": "restful endpoint to get an Ad algorithmically"
+			},
+			"response": []
+		}
+	]
+}
